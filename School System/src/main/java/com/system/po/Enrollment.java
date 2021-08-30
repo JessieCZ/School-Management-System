@@ -3,7 +3,7 @@ package com.system.po;
 /**
  * Selected Course class is a relationship of student and a chosen course
  */
-public class SelectedCourse {
+public class Enrollment {
     private Integer courseid;
 
     private Integer studentid;

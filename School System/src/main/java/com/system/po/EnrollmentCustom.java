@@ -3,7 +3,7 @@ package com.system.po;
 /**
  * Created by Jessie on 2021/7/29.
  */
-public class SelectedCourseCustom extends SelectedCourse {
+public class EnrollmentCustom extends Enrollment {
     private StudentCustom studentCustom;
 
     private CourseCustom courseCustom;

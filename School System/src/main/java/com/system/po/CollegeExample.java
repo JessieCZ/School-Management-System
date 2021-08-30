@@ -235,7 +235,7 @@ public class CollegeExample {
         }
     }
 
-    protected static class Criteria extends GeneratedCriteria {
+    public static class Criteria extends GeneratedCriteria {
 
         protected Criteria() {
             super();

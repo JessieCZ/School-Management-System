@@ -6,11 +6,9 @@ import java.util.List;
  * Student的扩展类
  */
 public class StudentCustom extends Student {
-    //所属院系名
     private String collegeName;
 
-    //选课列表
-    private List<SelectedCourseCustom> selectedCourseList;
+    private List<EnrollmentCustom> selectedCourseList;
 
 
     public void setcollegeName(String collegeName) {
@@ -21,11 +19,11 @@ public class StudentCustom extends Student {
         return collegeName;
     }
 
-    public void setSelectedCourseList(List<SelectedCourseCustom> selectedCourseList) {
+    public void setEnrollmentList(List<EnrollmentCustom> selectedCourseList) {
         this.selectedCourseList = selectedCourseList;
     }
 
-    public List<SelectedCourseCustom> getSelectedCourseList() {
+    public List<EnrollmentCustom> getEnrollmentList() {
         return selectedCourseList;
     }
 
