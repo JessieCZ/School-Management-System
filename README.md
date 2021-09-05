@@ -1,5 +1,5 @@
 # School-System-Rebuild 
-:star:  *An improved version of Examination System with improved features, web app path issues fixed, better naming and documentation.*
+:star:  *(WIP) This is an rebuild-from-scratch version of [School Management System](https://github.com/JessieCZ/School-System) with improved features: web app path issues fixed, better naming and documentation.*
 
 # Description
 This is a SSM school management system written in Java. Framework used: Shiro, Spring, MySQL, Bootstrap, and Maven. Functionalities include: user login, password update, course enrollment/drop, view/update course info, grades assignment, etc.
