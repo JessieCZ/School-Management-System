@@ -1,16 +1,15 @@
 package com.system.realm;
 
-import com.system.mapper.UserLoginMapper;
+import com.system.mapper.UserloginMapper;
 import com.system.po.Role;
-import com.system.po.UserLogin;
-import com.system.service.RoleService;
-import com.system.service.UserLoginService;
+import com.system.po.Userlogin;
+import com.system.service.*;
+import com.system.service.UserloginService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -26,8 +25,8 @@ public class LoginRealm extends AuthorizingRealm{
 
     // Resource Injection
 
-    @Resource(name = "userLoginServiceImpl")
-    private UserLoginService userloginService;
+    @Resource(name = "UserloginServiceImpl")
+    private UserloginService UserloginService;
 
     @Resource(name = "roleServiceImpl")
     private RoleService roleService;
@@ -42,7 +41,7 @@ public class LoginRealm extends AuthorizingRealm{
         Role role = null;
 
         try {
-            UserLogin userlogin = userloginService.findByName(username);
+            Userlogin userlogin = UserloginService.findByName(username);
             // get role
             role = roleService.findByid(userlogin.getRole());
         } catch (Exception e) {
@@ -68,9 +67,9 @@ public class LoginRealm extends AuthorizingRealm{
 
         String password = new String((char[])token.getCredentials());
 
-        UserLogin userlogin = null;
+        Userlogin userlogin = null;
         try {
-            userlogin = userloginService.findByName(username);
+            userlogin = UserloginService.findByName(username);
         } catch (Exception e) {
             e.printStackTrace();
         }

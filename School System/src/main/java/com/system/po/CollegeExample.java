@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CollegeExample {
-    public CollegeExample() {
-        oredCriteria = new ArrayList<>();
-    }
-
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
+
+    public CollegeExample() {
+        oredCriteria = new ArrayList<Criteria>();
+    }
 
     public void setOrderByClause(String orderByClause) {
         this.orderByClause = orderByClause;

@@ -1,10 +1,10 @@
 package com.system.po;
 
 /**
- * teacher
+ * teacher扩展类
  */
 public class TeacherCustom extends Teacher {
-    //所属院系名
+    //Department名
     private String collegeName;
 
     public void setcollegeName(String collegeName) {

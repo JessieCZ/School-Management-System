@@ -1,4 +1,5 @@
 package com.system.po;
+
 import java.util.Date;
 
 public class Teacher {

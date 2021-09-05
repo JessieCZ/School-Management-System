@@ -3,7 +3,6 @@ package com.system.service.impl;
 import com.system.mapper.CollegeMapper;
 import com.system.po.College;
 import com.system.po.CollegeExample;
-import com.system.service.CollegeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

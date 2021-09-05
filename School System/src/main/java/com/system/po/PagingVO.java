@@ -1,44 +1,46 @@
 package com.system.po;
 
 /**
- *  Paging VO
+ *  分页信息 pojo类
  */
 public class PagingVO {
 
-    // default: page 1
-    private int currentPageNo = 1;
-    // total page
+    //当前页码,默认第一页
+    private int curentPageNo = 1;
+    //总页数
     private int totalCount;
-    // max volume
-    private int pageSize = 5;
-    // last page
+    //页面容量
+    private int pageSize=5;
+    //上一页
     private int upPageNo;
-    // next page
+    //下一页
     private int nextPageNo;
-    // go to page, default 0
+    //要前往的页码,默认0
     private int toPageNo = 0;
 
     public void setToPageNo(Integer toPageNo) {
-        //new page
+        //新一页
         this.toPageNo = (toPageNo-1) * pageSize ;
-        //renew current page
-        setCurrentPageNo(toPageNo);
+        //设置跳转后当前的页码
+        setCurentPageNo(toPageNo);
     }
 
     public Integer getTopageNo() {
         return toPageNo;
     }
 
-    public int getCurrentPageNo() {
-        return currentPageNo;
+    public int getCurentPageNo() {
+        return curentPageNo;
     }
 
-    public void setCurrentPageNo(int currentPageNo) {
-        if (currentPageNo != 1) {
-            this.upPageNo = currentPageNo -1;
+    //设置当前页码
+    public void setCurentPageNo(int curentPageNo) {
+        if (curentPageNo != 1) {
+            this.upPageNo = curentPageNo - 1;
         }
-        this.nextPageNo = currentPageNo + 1;
-        this.currentPageNo = currentPageNo;
+        this.nextPageNo = curentPageNo + 1;
+
+        this.curentPageNo = curentPageNo;
     }
 
     public int getTotalCount() {

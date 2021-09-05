@@ -8,25 +8,25 @@ import java.util.List;
  * CourseService课程信息.
  */
 public interface CourseService {
-    // Update Course Info
-    void updateById(Integer id, CourseCustom courseCustom) throws Exception;
+    //根据id更新课程信息
+    void upadteById(Integer id, CourseCustom courseCustom) throws Exception;
 
-    // Delete course by id
+    //根据id删除课程信息
     Boolean removeById(Integer id) throws Exception;
 
-    // navigate by page
+    //获取分页查询课程信息
     List<CourseCustom> findByPaging(Integer toPageNo) throws Exception;
 
-    // insert new course info
+    //插入课程信息
     Boolean save(CourseCustom couseCustom) throws Exception;
 
-    // get total number of courses
-    int getCountCourse() throws Exception;
+    //获取课程总数
+    int getCountCouse() throws Exception;
 
-    // search by course id
+    //根据id查询
     CourseCustom findById(Integer id) throws Exception;
 
-    // search by course name
+    //根据名字查询
     List<CourseCustom> findByName(String name) throws Exception;
 
     //根据教师id查找课程

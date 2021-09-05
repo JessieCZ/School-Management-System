@@ -742,12 +742,14 @@ public class CourseExample {
         }
 
         protected Criterion(String condition) {
+            super();
             this.condition = condition;
             this.typeHandler = null;
             this.noValue = true;
         }
 
         protected Criterion(String condition, Object value, String typeHandler) {
+            super();
             this.condition = condition;
             this.value = value;
             this.typeHandler = typeHandler;

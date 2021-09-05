@@ -5,13 +5,19 @@ public class College {
 
     private String collegename;
 
-    public Integer getCollegeid() { return collegeid; }
+    public Integer getCollegeid() {
+        return collegeid;
+    }
 
-    public void setCollegeid(Integer collegeid) { this.collegeid = collegeid; }
+    public void setCollegeid(Integer collegeid) {
+        this.collegeid = collegeid;
+    }
 
-    public String getCollegename() { return collegename; }
+    public String getCollegename() {
+        return collegename;
+    }
 
     public void setCollegename(String collegename) {
-        this.collegename = collegename == null ? null: collegename.trim();
+        this.collegename = collegename == null ? null : collegename.trim();
     }
 }

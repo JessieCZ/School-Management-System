@@ -1,33 +1,35 @@
 package com.system.service;
 
 import com.system.po.TeacherCustom;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
+/**
+ * Teacher老师Service层
+ */
 public interface TeacherService {
 
-    // search for teacher by id
+    //根据id更新老师信息
     void updateById(Integer id, TeacherCustom teacherCustom) throws Exception;
 
-    // remove teacher by id
+    //根据id删除老师信息
     void removeById(Integer id) throws Exception;
 
-    // search for teacher by pageNo
+    //获取分页查询老师信息
     List<TeacherCustom> findByPaging(Integer toPageNo) throws Exception;
 
-    // update/save teacher's info
+    //保存老师信息
     Boolean save(TeacherCustom teacherCustom) throws Exception;
 
-    // get the total number of teachers
+    //获取老师总数
     int getCountTeacher() throws Exception;
 
-    // search teacher info by teacher id (unique)
+    //根据id查询
     TeacherCustom findById(Integer id) throws Exception;
 
-    // search teacher info by teacher name (there might be more than one)
+    //根据名字查询
     List<TeacherCustom> findByName(String name) throws Exception;
 
-    // get all teacher
+    //获取全部教师
     List<TeacherCustom> findAll() throws Exception;
 }

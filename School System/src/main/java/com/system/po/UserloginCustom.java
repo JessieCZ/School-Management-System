@@ -1,6 +1,9 @@
 package com.system.po;
 
-public class UserLoginCustom extends UserLogin {
+/**
+ * Userlogin扩展类
+ */
+public class UserloginCustom extends Userlogin {
 
     private Role role_ob;
 

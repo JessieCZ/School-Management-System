@@ -4,8 +4,11 @@ import com.system.po.College;
 
 import java.util.List;
 
+/**
+ * Created by Jessie on 2021/6/30.
+ */
 public interface CollegeService {
 
-    List<College> findAll() throws Exception;
+    List<College> finAll() throws Exception;
 
 }

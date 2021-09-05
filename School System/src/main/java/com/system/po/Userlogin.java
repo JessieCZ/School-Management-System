@@ -1,6 +1,6 @@
 package com.system.po;
 
-public class UserLogin {
+public class Userlogin {
     private Integer userid;
 
     private String username;

@@ -5,7 +5,7 @@ package com.system.po;
  */
 public class CourseCustom extends Course {
 
-    //所属院系名
+    //Department名
     private String collegeName;
 
     public void setcollegeName(String collegeName) {
