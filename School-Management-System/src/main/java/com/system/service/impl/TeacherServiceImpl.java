@@ -44,7 +44,7 @@ public class TeacherServiceImpl implements TeacherService {
         List<Course> list = courseMapper.selectByExample(courseExample);
 
         if (list.size() != 0) {
-            throw new CustomException("请先删除该名老师所Professor的课程");
+            throw new CustomException("Please delete all courses of this professor at first!");
         }
 
         teacherMapper.deleteByPrimaryKey(id);

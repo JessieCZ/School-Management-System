@@ -20,7 +20,7 @@ public class RestPasswordController {
     @Resource(name = "userloginServiceImpl")
     private UserloginService userloginService;
 
-    // 本账户密码重置
+    // Reset password and logout
     @RequestMapping(value = "/passwordRest", method = {RequestMethod.POST})
     public String passwordRest(String oldPassword, String password1) throws Exception {
         Subject subject = SecurityUtils.getSubject();
